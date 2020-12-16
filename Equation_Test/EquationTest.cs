@@ -28,9 +28,9 @@ namespace Equation_Test
         [Test]
         public void TestCos()
         {
-            var num = Equation.ConvertRadiant(5);
+            var num = Equation.ConvertRadiant(-23);
 
-            Assert.AreEqual(Equation.Rounding(Math.Cos(num),3), Equation.Rounding(Equation.Cos(num),3));
+            Assert.AreEqual(Math.Round(Math.Cos(num),12), Equation.Rounding(Equation.Cos(num),12));
         }
 
         [Test]
@@ -58,25 +58,25 @@ namespace Equation_Test
         [Test]
         public void TestLog()
         {
-            Assert.AreEqual(Equation.Rounding(Math.Log(23, 4),4), Equation.Rounding(Equation.Log(23, 4),4));
+            Assert.AreEqual(Math.Round(Math.Log(23, 4),3), Equation.Rounding(Equation.Log(23, 4),3));
         }
 
         [Test]
         public void TestLn()
         {
-            Assert.AreEqual(Equation.Rounding(Math.Log(7),4), Equation.Rounding(Equation.Ln(7),4));
+            Assert.AreEqual(Math.Round(Math.Log(7),3), Equation.Rounding(Equation.Ln(7),3));
         }
 
         [Test]
         public void TestExp()
         {
-            Assert.AreEqual(Equation.Rounding(Math.Exp(6),3), Equation.Rounding(Equation.Exp(6),3));
+            Assert.AreEqual(Math.Round(Math.Exp(6),3), Equation.Rounding(Equation.Exp(6),3));
         }
 
         [Test]
         public void TestLg()
         {
-            Assert.AreEqual(Equation.Rounding(Math.Log10(20), 4), Equation.Rounding(Equation.Lg(20), 4));
+            Assert.AreEqual(Math.Round(Math.Log10(20),3), Equation.Rounding(Equation.Lg(20), 3));
         }
 
         [Test]
@@ -106,7 +106,7 @@ namespace Equation_Test
         [Test]
         public void TestRound()
         {
-            Assert.AreEqual(4.54, Equation.Rounding(4.5468, 2));
+            Assert.AreEqual(Math.Round(4.5468,2), Equation.Rounding(4.5468, 2));
         }
     }
 }

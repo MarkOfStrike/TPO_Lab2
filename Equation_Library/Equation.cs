@@ -235,6 +235,11 @@
 
             if (x.ToString().Contains(","))
             {
+                var sharp = "";
+                for (int i = 0; i < count; i++)
+                {
+                    sharp += "#";
+                }
                 var num = x.ToString();
 
                 if (count >= num.Substring(num.IndexOf(",") + 1).Length)
@@ -242,7 +247,7 @@
                     return x;
                 }
 
-                return double.Parse(x.ToString().Substring(0, x.ToString().IndexOf(",") + 1 + count));
+                return double.Parse(string.Format($"{{0:0.{sharp}}}", x));
             }
             else
             {
