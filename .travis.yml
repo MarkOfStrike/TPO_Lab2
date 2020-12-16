@@ -2,7 +2,8 @@ language: csharp
 solution: TPO_Lab2.sln
 install:
   - nuget restore TPO_Lab2.sln
-  - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
+  - nuget install NUnit.Console -Version 3.11.1 -OutputDirectory packages
 script:
-  - msbuild /p:Configuration=Release TPO_Lab2.sln
+  - msbuild /p:Configuration=Debug TPO_Lab2.sln
+  - mono ./packages/NUnit.ConsoleRunner.3.11.1/tools/nunit3-console.exe ./Equation_Test/bin/Debug/Equation_Test.dll
 
