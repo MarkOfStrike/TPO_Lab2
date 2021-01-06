@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Equation_Library", "Equatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Equation_Test", "Equation_Test\Equation_Test.csproj", "{8511BD1C-81BC-4DD3-A2FD-8F4446827602}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Function_Result", "Function_Result\Function_Result.csproj", "{620101AF-B9B4-4659-BADC-84BAFFDAD4CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8511BD1C-81BC-4DD3-A2FD-8F4446827602}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8511BD1C-81BC-4DD3-A2FD-8F4446827602}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8511BD1C-81BC-4DD3-A2FD-8F4446827602}.Release|Any CPU.Build.0 = Release|Any CPU
+		{620101AF-B9B4-4659-BADC-84BAFFDAD4CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{620101AF-B9B4-4659-BADC-84BAFFDAD4CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{620101AF-B9B4-4659-BADC-84BAFFDAD4CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{620101AF-B9B4-4659-BADC-84BAFFDAD4CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

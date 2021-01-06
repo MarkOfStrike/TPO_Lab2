@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EquationTest.cs" />
+    <Compile Include="FormulaTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -57,6 +58,10 @@
     <ProjectReference Include="..\Equation_Library\Equation_Library.csproj">
       <Project>{00b55037-fa43-45b6-a6ab-e4bc85a0425e}</Project>
       <Name>Equation_Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Function_Result\Function_Result.csproj">
+      <Project>{620101af-b9b4-4659-badc-84baffdad4cc}</Project>
+      <Name>Function_Result</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
