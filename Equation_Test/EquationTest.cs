@@ -20,7 +20,7 @@ namespace Equation_Test
         [Test]
         public void TestSin()
         {
-            for (int i = -20; i < 20; i++)
+            for (double i = -20; i < 20; i+=0.1)
             {
                 var num = Equation.ConvertRadiant(i);
 
@@ -50,7 +50,7 @@ namespace Equation_Test
         [Test]
         public void TestTan()
         {
-            for (int i = -20; i < 20; i++)
+            for (double i = -20; i < 20; i += 0.1)
             {
                 var num = Equation.ConvertRadiant(i);
 
@@ -61,7 +61,7 @@ namespace Equation_Test
         [Test]
         public void TestCot()
         {
-            for (int i = -20; i < 20; i++)
+            for (double i = -20; i < 20; i += 0.1)
             {
                 var num = Equation.ConvertRadiant(i);
 
@@ -86,7 +86,7 @@ namespace Equation_Test
         [Test]
         public void TestLn()
         {
-            for (int i = 1; i < 40; i++)
+            for (int i = -20; i < 20; i++)
             {
                 Assert.AreEqual(Math.Log(i), Equation.Ln(i), 0.001);
             }
@@ -95,7 +95,7 @@ namespace Equation_Test
         [Test]
         public void TestExp()
         {
-            for (int i = 1; i < 10; i++)
+            for (double i = 1; i < 10; i += 0.1)
             {
                 Assert.AreEqual(Math.Exp(i), Equation.Exp(i), 1);
             }
@@ -105,7 +105,7 @@ namespace Equation_Test
         [Test]
         public void TestLg()
         {
-            for (int i = 1; i < 40; i++)
+            for (double i = 1; i < 40; i += 0.1)
             {
                 Assert.AreEqual(Math.Log10(i), Equation.Lg(i), 0.001);
             }
@@ -114,11 +114,11 @@ namespace Equation_Test
         [Test]
         public void TestPow()
         {
-            for (int i = 0; i < 10; i++)
+            for (double i = 1; i < 10; i += 0.1)
             {
                 for (int j = 0; j < 10; j++)
                 {
-                    Assert.AreEqual(Math.Pow(i, j), Equation.Pow(i,j));
+                    Assert.AreEqual(Math.Pow(i, j), Equation.Pow(i,j), 0.000001);
                 }
             }
         }
@@ -126,9 +126,9 @@ namespace Equation_Test
         [Test]
         public void TestSqrt()
         {
-            for (int i = 0; i < 150; i++)
+            for (double i = 1; i < 150; i++)
             {
-                Assert.AreEqual(Math.Sqrt(87), Equation.Sqrt(87));
+                Assert.AreEqual(Math.Sqrt(i), Equation.Sqrt(i), 0.001);
             }
         }
 

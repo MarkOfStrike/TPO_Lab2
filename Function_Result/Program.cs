@@ -56,6 +56,10 @@ namespace Function_Result
                     str = FunctionData.GetFunctionData(x1, x2, step, Equation.Cot);
                     fileName = "Cot";
                     break;
+                case 5:
+                    str = FunctionData.GetFunctionLog(x1, x2, step, Equation.Ln);
+                    fileName = "Logarifm";
+                    break;
 
                 default:
                     break;

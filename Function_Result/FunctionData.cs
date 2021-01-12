@@ -24,7 +24,17 @@ namespace Function_Result
             return result;
         }
 
+        public static StringBuilder GetFunctionLog(double x1, double x2, double step, Func<double, double> function)
+        {
+            StringBuilder result = new StringBuilder();
 
+            for (var i = x1; i < x2; i += step)
+            {
+                result.Append($"{i}|{function(i)}\n");
+            }
+
+            return result;
+        }
     }
 
 }
