@@ -81,7 +81,7 @@ namespace Equation_Test
         [Test]
         public void TestFormulas()
         {
-            for (int i = -30; i < 30; i++)
+            for (double i = -30; i < 30; i+=0.2)
             {
                 var actual = Function.FunctionResult(i);
                 var expected = Function.FunctionResultMath(i);

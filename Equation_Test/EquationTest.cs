@@ -31,7 +31,7 @@ namespace Equation_Test
         [Test]
         public void TestCos()
         {
-            for (int i = -20; i < 20; i++)
+            for (double i = -20; i < 20; i += 0.1)
             {
                 var num = Equation.ConvertRadiant(i);
 
@@ -86,9 +86,9 @@ namespace Equation_Test
         [Test]
         public void TestLn()
         {
-            for (int i = -20; i < 20; i++)
+            for (double i = -10; i < 20; i+=0.1)
             {
-                Assert.AreEqual(Math.Log(i), Equation.Ln(i), 0.001);
+                Assert.AreEqual(Math.Log(i), Equation.Ln(i), 0.1);
             }
         }
 
@@ -126,7 +126,7 @@ namespace Equation_Test
         [Test]
         public void TestSqrt()
         {
-            for (double i = 1; i < 150; i++)
+            for (double i = 1; i < 150; i+=0.1)
             {
                 Assert.AreEqual(Math.Sqrt(i), Equation.Sqrt(i), 0.001);
             }
@@ -154,7 +154,7 @@ namespace Equation_Test
         public void TestRound()
         {
             Random ran = new Random();
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < 50; i++)
             {
                 var num = ran.NextDouble() * 10;
 
