@@ -26,5 +26,22 @@ namespace Function_Result
             }
         }
 
+        public static double FunctionResultMath(double num)
+        {
+            
+
+            if (num <= 0)
+            {
+                var x = Equation.ConvertRadiant(num);
+                double d = (Math.Pow(((((1/Math.Tan(x)) + Math.Tan(x)) + (1 / Math.Tan(x))) - (Math.Cos(x) - Math.Cos(x))), 2) * Math.Cos(x));
+                return d;
+            }
+            else
+            {
+                double r = (((((Math.Log10(num) / Math.Log(num, 5)) * Math.Log(num, 2)) / Math.Log(num)) * Math.Log10(num)) + (Math.Log(num, 3) / Math.Log(num, 2)));
+                return r;
+            }
+        }
+
     }
 }

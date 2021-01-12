@@ -20,81 +20,128 @@ namespace Equation_Test
         [Test]
         public void TestSin()
         {
-            var num = Equation.ConvertRadiant(5);
+            for (int i = -20; i < 20; i++)
+            {
+                var num = Equation.ConvertRadiant(i);
 
-            Assert.AreEqual(Math.Sin(num), Equation.Sin(num));
+                Assert.AreEqual(Math.Sin(num), Equation.Sin(num), 0.000000001);
+            }
         }
 
         [Test]
         public void TestCos()
         {
-            var num = Equation.ConvertRadiant(-23);
+            for (int i = -20; i < 20; i++)
+            {
+                var num = Equation.ConvertRadiant(i);
 
-            Assert.AreEqual(Math.Cos(num), Equation.Cos(num),0.001);
+                Assert.AreEqual(Math.Cos(num), Equation.Cos(num), 0.001);
+            }
         }
 
         [Test]
         public void TestFact()
         {
             Assert.AreEqual(720, Equation.Fact(6));
+            Assert.AreEqual(2, Equation.Fact(2));
+            Assert.AreEqual(24, Equation.Fact(4));
         }
 
         [Test]
         public void TestTan()
         {
-            var num = Equation.ConvertRadiant(5);
+            for (int i = -20; i < 20; i++)
+            {
+                var num = Equation.ConvertRadiant(i);
 
-            Assert.AreEqual(Math.Tan(num), Equation.Tan(num));
+                Assert.AreEqual(Math.Tan(num), Equation.Tan(num), 0.00000001);
+            }
         }
 
         [Test]
         public void TestCot()
         {
-            var num = Equation.ConvertRadiant(5);
+            for (int i = -20; i < 20; i++)
+            {
+                var num = Equation.ConvertRadiant(i);
 
-            Assert.AreEqual(1 / Math.Tan(num), Equation.Cot(num));
+                Assert.AreEqual(1 / Math.Tan(num), Equation.Cot(num), 0.00001);
+            }
         }
 
         [Test]
         public void TestLog()
         {
-            Assert.AreEqual(Math.Log(23, 4), Equation.Log(23, 4),0.001);
+            Random ran = new Random();
+
+            for (double i = 1; i < 40; i++)
+            {
+                for (double j = 2; j < 10; j++)
+                {
+                    Assert.AreEqual(Math.Log(i, j), Equation.Log(i, j), 0.001);
+                }
+            }
         }
 
         [Test]
         public void TestLn()
         {
-            Assert.AreEqual(Math.Log(7), Equation.Ln(7),0.001);
+            for (int i = 1; i < 40; i++)
+            {
+                Assert.AreEqual(Math.Log(i), Equation.Ln(i), 0.001);
+            }
         }
 
         [Test]
         public void TestExp()
         {
-            Assert.AreEqual(Math.Exp(6), Equation.Exp(6),0.001);
+            for (int i = 1; i < 10; i++)
+            {
+                Assert.AreEqual(Math.Exp(i), Equation.Exp(i), 1);
+            }
+            
         }
 
         [Test]
         public void TestLg()
         {
-            Assert.AreEqual(Math.Log10(20), Equation.Lg(20),0.001);
+            for (int i = 1; i < 40; i++)
+            {
+                Assert.AreEqual(Math.Log10(i), Equation.Lg(i), 0.001);
+            }
         }
 
         [Test]
         public void TestPow()
         {
-            Assert.AreEqual(Math.Pow(5, 7), Equation.Pow(5, 7));
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    Assert.AreEqual(Math.Pow(i, j), Equation.Pow(i,j));
+                }
+            }
         }
 
         [Test]
         public void TestSqrt()
         {
-            Assert.AreEqual(Math.Sqrt(87), Equation.Sqrt(87));
+            for (int i = 0; i < 150; i++)
+            {
+                Assert.AreEqual(Math.Sqrt(87), Equation.Sqrt(87));
+            }
         }
 
         [Test]
         public void TestAbs()
         {
-            Assert.AreEqual(Math.Abs(-46), Equation.Abs(-46));
+            Random ran = new Random();
+
+            for (int i = 0; i < 20; i++)
+            {
+                var num = ran.Next(-500, 100);
+                Assert.AreEqual(Math.Abs(num), Equation.Abs(num));
+            }
         }
 
         [Test]
@@ -106,7 +153,13 @@ namespace Equation_Test
         [Test]
         public void TestRound()
         {
-            Assert.AreEqual(4.55, Equation.Rounding(4.5468, 2), 0.01);
+            Random ran = new Random();
+            for (int i = 0; i < 20; i++)
+            {
+                var num = ran.NextDouble() * 10;
+
+                Assert.AreEqual(Math.Round(num, 2), Equation.Rounding(num, 2), 0.01);
+            }
         }
     }
 }

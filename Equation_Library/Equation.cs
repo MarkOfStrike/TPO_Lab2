@@ -225,7 +225,7 @@
         {
             if (count < 0)
             {
-                //ошибка
+                return double.NaN;
             }
 
             if (count == 0)

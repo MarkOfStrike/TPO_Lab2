@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Equation_Library;
+
 using Function_Result;
 
 using NUnit.Framework;
@@ -74,6 +76,18 @@ namespace Equation_Test
             var expected = 1.6;
 
             Assert.AreEqual(expected, actual, 0.1);
+        }
+
+        [Test]
+        public void TestFormulas()
+        {
+            for (int i = -30; i < 30; i++)
+            {
+                var actual = Function.FunctionResult(i);
+                var expected = Function.FunctionResultMath(i);
+
+                Assert.AreEqual(expected, actual, 0.001);
+            }
         }
     }
 }
